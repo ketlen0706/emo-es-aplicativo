@@ -1,0 +1,80 @@
+body {
+  background-color: #f5dec9;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 100px;
+  grid-template-areas:
+    "mensagem imagem botao"
+    "apoio apoio apoio";
+  min-height: 100vh;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.mensagem {
+  grid-area: mensagem;
+  background-color: #434141;
+  color: rgb(255, 253, 253);
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 18px;
+  text-align: justify;
+  /* REMOVER SCROLL E LIMITAÇÃO */
+  height: auto;
+  max-height: none;
+  overflow: visible;
+}
+
+.imagem-caixa {
+  grid-area: imagem;
+  background-color: #7d7979;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 300px;
+  margin: auto;
+}
+
+.titulo-procastinação {
+  font-weight: bold;
+  font-size: 24px;
+  color: #000000;
+}
+
+.botao-voltar {
+  grid-area: botao;
+  align-self: center;
+  justify-self: center;
+  background-color: #ffc107;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 12px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.botao-voltar:hover {
+  background-color: #e0a800;
+}
+
+.apoio {
+  grid-area: apoio;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  justify-self: center;
+  align-self: end;
+  margin-bottom: 10px;
+}
